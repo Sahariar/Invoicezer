@@ -90,4 +90,4 @@ Open a Pull Request
 This project is open-sourced under the MIT License.
 
 ## 🙌 Credits
-Built and maintained by Sahariar Kabir.
+Built and maintained by <a herf="https://github.com/Sahariar">Sahariar Kabir</a>.
