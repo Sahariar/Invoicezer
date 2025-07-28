@@ -2,31 +2,29 @@
 
 namespace App\Models;
 
-use Faker\Provider\ar_EG\Company;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Invoices extends Model
+class Invoice extends Model
 {
-    //
     use HasFactory, Notifiable;
 
     protected $guarded = ['id'];
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
     public function client()
     {
-        $this->belongsTo(Client::class);
+        return $this->belongsTo(Client::class);
     }
     public function company()
     {
-        $this->belongsTo(Companies::class);
+        return $this->belongsTo(Company::class);
     }
-    public function InvoiceItems()
+    public function invoiceItems()
     {
-        $this->hasMany(InvoiceItem::class);
+        return $this->hasMany(InvoiceItem::class);
     }
 }

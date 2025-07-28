@@ -13,8 +13,8 @@ class InvoiceItem extends Model
 
     protected $guarded = ['id'];
 
-    public function Invoices()
+    public function Invoice()
     {
-        $this->belongsTo(Invoices::class);
+        return  $this->belongsTo(Invoice::class);
     }
 }

@@ -55,21 +55,20 @@ class User extends Authenticatable
         return Str::of($this->name)
             ->explode(' ')
             ->take(2)
-            ->map(fn ($word) => Str::substr($word, 0, 1))
+            ->map(fn($word) => Str::substr($word, 0, 1))
             ->implode('');
     }
 
-
-    public function clients ()
+    public function clients()
     {
         $this->hasMany(Client::class);
     }
-    public function companies ()
+    public function company()
     {
-        $this->hasMany(Companies::class);
+        $this->hasMany(Company::class);
     }
-    public function invoices ()
+    public function invoices()
     {
-        $this->hasMany(Invoices::class);
+        $this->hasMany(Invoice::class);
     }
 }
